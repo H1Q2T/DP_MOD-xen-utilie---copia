@@ -1,0 +1,40 @@
+{
+  "name": "DP_MOD_for_nex",
+  "version": "0.1",
+  "description": "utilites for nex mod",
+  "permissions": [
+    "tabs",
+    "declarativeContent",
+    "https://www.mysteralegacy.com/play/full.php",
+    "https://www.mysteralegacy.com/play-ml/",
+    "*://www.mysteralegacy.com/*"
+  ],
+  "page_action": {
+    "default_icon": {
+      "16": "images/manager2.png",
+      "32": "images/manager2.png",
+      "48": "images/manager2.png",
+      "128": "images/manager2.png"
+    },
+    "default_title": "Select Bot action"
+  },
+  "externally_connectable": {
+    "matches": ["*://www.mysteralegacy.com/*"]
+  },
+  "icons": {
+    "16": "images/manager.png",
+    "32": "images/manager.png",
+    "48": "images/manager.png",
+    "128": "images/manager.png"
+  },
+  "web_accessible_resources": ["content.js"],
+  "content_scripts": [{
+    "matches": [
+      "https://www.mysteralegacy.com/play/full.php",
+      "https://www.mysteralegacy.com/play-ml/"
+    ],
+    "js": ["start.js"],
+    "run_at": "document_start"
+  }],
+  "manifest_version": 2
+}
